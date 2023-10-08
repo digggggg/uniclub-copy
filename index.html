@@ -3,22 +3,75 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Document</title>
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Playfair+Display&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <title>University Club Recreation</title>
     </head>
     <body>
         <div id="root">
-            <nav id="main-nav">
-                <a href="/" onclick="route()">Home</a>
-                <a href="/about" onclick="route()">About the Club</a>
-                <a href="/guests" onclick="route()">Guest Rooms</a>
-                <a href="/banquets" onclick="route()">Banquets</a>
-                <a href="weddings" onclick="route()">Weddings</a>
-                <a href="login" onclick="route()">Member Login</a>
-            </nav>
-            <div id="main-page"></div>
-        </div>
+            <nav id="main-nav" class="nav">
+                <div class="new--nav">
+                    <img
+                        src="/public/images/homepagelogo.png"
+                        alt="The logo for the University Club of New York"
+                    />
+                    <div class="burger--container">
+                        <div class="mini--burger">
+                            <div class="burger--toggle">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <p>MENU</p>
+                        </div>
+                    </div>
+                </div>
 
-        <script src="router.js"></script>
+                <div class="nav--wrapper nav-menu">
+                    <a class="text--nav--link" href="/about" onclick="route()"
+                        >ABOUT THE CLUB</a
+                    >
+                    <a class="text--nav--link" href="/guests" onclick="route()"
+                        >GUEST ROOMS</a
+                    >
+                    <a href="/" onclick="routeHome()"
+                        ><div class="nav--img--wrapper">
+                            <img
+                                src="/public/images/homepagelogo.png"
+                                alt="The logo for the University Club of New York"
+                            /></div
+                    ></a>
+                    <a
+                        class="text--nav--link"
+                        href="/banquets"
+                        onclick="route()"
+                        >BANQUETS</a
+                    >
+                    <a
+                        class="text--nav--link"
+                        href="/weddings"
+                        onclick="route()"
+                        >WEDDINGS</a
+                    >
+                    <a
+                        class="text--nav--link"
+                        id="member--login"
+                        href="/login"
+                        onclick="route()"
+                        >MEMBER LOGIN</a
+                    >
+                </div>
+            </nav>
+            <div id="main-page">
+                <p onclick="testFunction()">This is a test</p>
+            </div>
+        </div>
+        <script src="/js/index.js"></script>
+        <script src="/js/router.js"></script>
     </body>
 </html>
