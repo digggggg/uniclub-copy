@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/about.css" />
     </head>
     <body>
-        <div class="home--div">This is the about page</div>
+        <div class="banner">
+            <img
+                id="home--banner--image"
+                src="/public/images/getImage.png"
+                alt="An banner image with the picture the the University Club of New York's front entrance"
+            />
+        </div>
+        <section>
+            <article>
+                <h4>About The Club</h4>
+                <h1>
+                    THE UNIVERSITY CLUB IS MORE THAN AN ARCHITECTURAL LANDMARK.
+                </h1>
+                <p>
+                    Through the vitality of its members, it has evolved into New
+                    York’s premier social club offering unparalleled services to
+                    members - from gracious dining, luxurious accommodations and
+                    a variety of social events, to extensive athletic facilities
+                    and the world’s largest and finest club library.
+                </p>
+                <p>
+                    Steeped in tradition, the club reflects a warm and welcoming
+                    ambiance, while addressing the current needs of its
+                    membership. Enthusiastic member volunteers commit
+                    theirskills and time to create this appealing atmosphere.
+                    Over the years, through strong and active committees,
+                    members have been the source of the inspiration and
+                    leadership that ensures the club’s continued relevance and
+                    importance to their lives.
+                </p>
+                <p>Members are the club’s heart and soul.</p>
+            </article>
+        </section>
+        <div class="about--image--wrapper">
+            <div>
+                <a
+                    class="about--link"
+                    href="/weddings"
+                    onclick="routeWeddings()"
+                >
+                    <div class="about--image--container">
+                        <img
+                            class="about--image"
+                            src="/public/images/reception.png"
+                            alt="Image of beautiful wedding tables and for a reception"
+                        />
+                        <p
+                            class="about--image--text"
+                            name="/weddings"
+                            data="/weddings"
+                        >
+                            PLAN YOUR SPECIAL DAY
+                        </p>
+                    </div></a
+                >
+            </div>
+            <div>
+                <a class="about--link" href="/guests" onclick="routeGuests()">
+                    <div class="about--image--container">
+                        <img
+                            class="about--image"
+                            src="/public/images/guestroom.png"
+                            alt="An image of a beautiful guest room"
+                        />
+                        <p class="about--image--text">PLAN YOUR NEXT STAY</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- <script src="/js/router.js"></script> -->
     </body>
 </html>

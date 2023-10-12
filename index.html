@@ -42,6 +42,7 @@
                     <a href="/" onclick="routeHome()"
                         ><div class="nav--img--wrapper">
                             <img
+                                data="/"
                                 src="/public/images/homepagelogo.png"
                                 alt="The logo for the University Club of New York"
                             /></div
@@ -68,8 +69,27 @@
                 </div>
             </nav>
             <div id="main-page">
-                <p onclick="testFunction()">This is a test</p>
+                <p>This is a test</p>
             </div>
+            <footer>
+                <div class="footer--left">
+                    <p>The University Club of New York</p>
+                    <div>
+                        <p>One West 54th Street New York, NY 10019</p>
+                        <p>Tel: 212-247-2100</p>
+                    </div>
+                </div>
+                <div class="footer--right">
+                    <p>This page is a mock up, not official</p>
+                    <div>
+                        <a href="/contact" onclick="route()"
+                            >CONTACT & DIRECTIONS</a
+                        >
+                        <a href="/rules" onclick="route()">HOUSE RULES</a>
+                        <p>Mock up by digggggg</p>
+                    </div>
+                </div>
+            </footer>
         </div>
         <script src="/js/index.js"></script>
         <script src="/js/router.js"></script>

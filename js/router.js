@@ -3,13 +3,19 @@ const route = (event) => {
     //event is the click of the link
     // window.event is deprecated but this way of routing breaks if the or statement is not included so idk
     event = event || window.event;
+    console.log("This is the event object", event);
     console.log(
         "clicked, This is the event.target.href ===",
         event.target.href
     );
+    let newPath =
+        event.target.href == undefined ? event.target.data : event.target.href;
+
+    console.log("This is the event.target", event.target);
+    console.log("This is the event.target.data", event.target.data);
     event.preventDefault();
     // preventing the default link behavior so we can execute code before the user can go to the link
-    window.history.pushState({}, "", event.target.href);
+    window.history.pushState({}, "", newPath);
     // this allows us to look at the browser history stack and load the url to the page the user is trying to get to onto the stack
     // pushState only works with urls that are within the origin of the website, any pages the website has are fine external links are not
     // override the default link behavior to revolve around the custom app routes instead
@@ -24,6 +30,22 @@ const routeHome = (event) => {
     handleLocation();
 };
 
+const routeWeddings = (event) => {
+    event = event || window.event;
+    console.log("this is the route weddings function");
+    event.preventDefault();
+    window.history.pushState({}, "", "/weddings");
+    handleLocation();
+};
+
+const routeGuests = (event) => {
+    event = event || window.event;
+    console.log("this is the route guests function");
+    event.preventDefault();
+    window.history.pushState({}, "", "/guests");
+    handleLocation();
+};
+
 const routes = {
     404: "/pages/404.html",
     "/": "/pages/index.html",
@@ -32,6 +54,8 @@ const routes = {
     "/banquets": "/pages/banquets.html",
     "/weddings": "/pages/weddings.html",
     "/login": "/pages/login.html",
+    "/contact": "/pages/contact.html",
+    "/rules": "/pages/rules.html",
 };
 
 const handleLocation = async () => {
