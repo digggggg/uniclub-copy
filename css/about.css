@@ -11,7 +11,7 @@ section {
     margin: 0 auto;
     width: 50%;
     padding-top: 3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 7rem;
 }
 
 article h4 {
@@ -78,4 +78,30 @@ article p {
     padding-bottom: 1rem;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
+}
+
+@media (max-width: 30rem) {
+    section {
+        width: 80%;
+    }
+
+    article h1 {
+        font-size: 2rem;
+    }
+    .about--image--wrapper {
+        grid-template-columns: repeat(1, 80%);
+    }
+}
+
+@media (min-width: 30rem) and (max-width: 60rem) {
+    section {
+        width: 80%;
+    }
+
+    .about--image--wrapper {
+        grid-template-columns: repeat(1, 80%);
+    }
+}
+
+@media (min-width: 60rem) {
 }

@@ -121,6 +121,7 @@ footer {
 .footer--right div a:hover {
     color: #545454;
 }
+
 /* small screen */
 @media (max-width: 30rem) {
     .nav--wrapper {
