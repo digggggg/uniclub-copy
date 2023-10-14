@@ -9,7 +9,9 @@ const route = (event) => {
         event.target.href
     );
     let newPath =
-        event.target.href == undefined ? event.target.data : event.target.href;
+        event.currentTarget.href == undefined
+            ? event.currentTarget.data
+            : event.currentTarget.href;
 
     console.log("This is the event.target", event.target);
     console.log("This is the event.target.data", event.target.data);
@@ -19,30 +21,6 @@ const route = (event) => {
     // this allows us to look at the browser history stack and load the url to the page the user is trying to get to onto the stack
     // pushState only works with urls that are within the origin of the website, any pages the website has are fine external links are not
     // override the default link behavior to revolve around the custom app routes instead
-    handleLocation();
-};
-
-const routeHome = (event) => {
-    event = event || window.event;
-    console.log("this is the route home function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/");
-    handleLocation();
-};
-
-const routeWeddings = (event) => {
-    event = event || window.event;
-    console.log("this is the route weddings function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/weddings");
-    handleLocation();
-};
-
-const routeGuests = (event) => {
-    event = event || window.event;
-    console.log("this is the route guests function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/guests");
     handleLocation();
 };
 
@@ -73,3 +51,27 @@ window.onpopstate = handleLocation;
 window.route = route;
 // window.routeHome = routeHome();
 handleLocation();
+
+const routeHome = (event) => {
+    event = event || window.event;
+    console.log("this is the route home function");
+    event.preventDefault();
+    window.history.pushState({}, "", "/");
+    handleLocation();
+};
+
+const routeWeddings = (event) => {
+    event = event || window.event;
+    console.log("this is the route weddings function");
+    event.preventDefault();
+    window.history.pushState({}, "", "/weddings");
+    handleLocation();
+};
+
+const routeGuests = (event) => {
+    event = event || window.event;
+    console.log("this is the route guests function");
+    event.preventDefault();
+    window.history.pushState({}, "", "/guests");
+    handleLocation();
+};
