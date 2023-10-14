@@ -1,10 +1,17 @@
 // const guestWrapper = document.querySelector(".guest--rooms--wrapper");
+console.log("loaded guest js");
 
-const guestRoom = document.querySelector(".guest--rooms--card");
-
-console.log("Loaded the guests js");
-
-guestRoom.addEventListener("click", () => {
-    guestRoom.classList.toggle("clicked");
-    console.log("clicked");
-});
+const guestRoom = document.querySelectorAll(".guest--rooms--card");
+console.log(guestRoom);
+let guestRoomCount = 1;
+if (guestRoom) {
+    for (const card of guestRoom) {
+        card.addEventListener("click", () => {
+            card.classList.toggle("clicked");
+        });
+    }
+    // guestRoom.addEventListener("click", () => {
+    //     guestRoom.classList.toggle("clicked");
+    //     console.log("clicked");
+    // });
+}

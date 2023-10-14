@@ -1,3 +1,5 @@
+console.log("This is the main page and I have loaded the index.js script");
+
 // targeting the burger menu
 const menuToggle = document.querySelector(".burger--toggle");
 // targeting the nav menu

@@ -13,8 +13,6 @@ const route = (event) => {
             ? event.currentTarget.data
             : event.currentTarget.href;
 
-    console.log("This is the event.target", event.target);
-    console.log("This is the event.target.data", event.target.data);
     event.preventDefault();
     // preventing the default link behavior so we can execute code before the user can go to the link
     window.history.pushState({}, "", newPath);
@@ -44,34 +42,32 @@ const handleLocation = async () => {
     // need to grab the html and turn it into text
     const html = await fetch(route).then((data) => data.text());
     document.getElementById("main-page").innerHTML = html;
+    switch (route) {
+        case "/pages/index.html":
+            loadHomeScript();
+            break;
+        case "/pages/guests.html":
+            loadGuestScript();
+            break;
+    }
 };
+
+// script functions
+
+function loadHomeScript() {
+    const script = document.createElement("script");
+    script.src = "/js/index.js";
+    document.body.appendChild(script);
+}
+
+function loadGuestScript() {
+    const script = document.createElement("script");
+    script.src = "/js/guests.js";
+    document.body.appendChild(script);
+}
 
 window.onpopstate = handleLocation;
 // added route and routeHome functions to the window object
 window.route = route;
 // window.routeHome = routeHome();
 handleLocation();
-
-const routeHome = (event) => {
-    event = event || window.event;
-    console.log("this is the route home function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/");
-    handleLocation();
-};
-
-const routeWeddings = (event) => {
-    event = event || window.event;
-    console.log("this is the route weddings function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/weddings");
-    handleLocation();
-};
-
-const routeGuests = (event) => {
-    event = event || window.event;
-    console.log("this is the route guests function");
-    event.preventDefault();
-    window.history.pushState({}, "", "/guests");
-    handleLocation();
-};
