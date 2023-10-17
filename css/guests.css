@@ -137,7 +137,7 @@ section h1 {
 @media (max-width: 30rem) {
     .guest--images {
         grid-template-columns: repeat(1, 80%);
-        gap: 4rem;
+        gap: 2rem;
     }
 
     section {

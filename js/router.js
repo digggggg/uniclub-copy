@@ -5,8 +5,8 @@ const route = (event) => {
     event = event || window.event;
     console.log("This is the event object", event);
     console.log(
-        "clicked, This is the event.target.href ===",
-        event.target.href
+        "clicked, This is the event.currentTarget.href ===",
+        event.currentTarget.href
     );
     let newPath =
         event.currentTarget.href == undefined
@@ -55,6 +55,8 @@ const handleLocation = async () => {
 // script functions
 
 function loadHomeScript() {
+    // const oldScript = document.getElementsByTagName("script");
+    // console.log("this is the old script", oldScript);
     const script = document.createElement("script");
     script.src = "/js/index.js";
     document.body.appendChild(script);
