@@ -3,11 +3,11 @@ const route = (event) => {
     //event is the click of the link
     // window.event is deprecated but this way of routing breaks if the or statement is not included so idk
     event = event || window.event;
-    console.log("This is the event object", event);
-    console.log(
-        "clicked, This is the event.currentTarget.href ===",
-        event.currentTarget.href
-    );
+    // console.log("This is the event object", event);
+    // console.log(
+    //     "clicked, This is the event.currentTarget.href ===",
+    //     event.currentTarget.href
+    // );
     let newPath =
         event.currentTarget.href == undefined
             ? event.currentTarget.data
@@ -49,14 +49,15 @@ const handleLocation = async () => {
         case "/pages/guests.html":
             loadGuestScript();
             break;
+        case "/pages/banquets.html":
+            loadBanquetsScript();
+            break;
     }
 };
 
 // script functions
 
 function loadHomeScript() {
-    // const oldScript = document.getElementsByTagName("script");
-    // console.log("this is the old script", oldScript);
     const script = document.createElement("script");
     script.src = "/js/index.js";
     document.body.appendChild(script);
@@ -65,6 +66,12 @@ function loadHomeScript() {
 function loadGuestScript() {
     const script = document.createElement("script");
     script.src = "/js/guests.js";
+    document.body.appendChild(script);
+}
+
+function loadBanquetsScript() {
+    const script = document.createElement("script");
+    script.src = "/js/banquets.js";
     document.body.appendChild(script);
 }
 

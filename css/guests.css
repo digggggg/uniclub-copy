@@ -30,23 +30,25 @@ section h1 {
 
 .guest--card--header {
     z-index: 1;
-    padding-right: 1.42rem;
     cursor: pointer;
 }
 
+i {
+    margin-right: 1.25rem;
+}
+
 .guest--rooms--card {
-    border: solid 1px #514f4c;
+    border: solid 1px rgba(84, 84, 84, 0.15);
     font-family: "Playfair Display", "sans-seriff";
     font-size: 1.2rem;
     font-weight: 600;
-    border-bottom: 1px solid #514f4c;
     transition: 0.1s all ease-in-out;
 }
 
 .guest--rooms--card p {
     display: flex;
     justify-content: space-between;
-    width: 96%;
+    width: 98%;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -117,7 +119,7 @@ section h1 {
     color: #ffffff;
 }
 
-.guest--rooms--card.clicked {
+.guest--card--header.clicked {
     background-color: #202036;
     color: #ffffff;
 }

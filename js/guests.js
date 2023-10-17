@@ -6,8 +6,6 @@ function isLoaded(loaded) {
     if (loaded === 1) {
         return console.log("The js should already be loaded");
     }
-
-    const guestRoom = document.querySelectorAll(".guest--rooms--card");
     const guestRoomHeaders = document.querySelectorAll(".guest--card--header");
 
     if (guestRoomHeaders) {
