@@ -20,3 +20,5 @@ function isLoaded(loaded) {
 
     jsLoaded++;
 }
+
+isLoaded(jsLoaded);

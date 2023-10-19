@@ -57,11 +57,11 @@ const handleLocation = async () => {
 
 // script functions
 
-function loadHomeScript() {
-    const script = document.createElement("script");
-    script.src = "/js/index.js";
-    document.body.appendChild(script);
-}
+// function loadHomeScript() {
+//     const script = document.createElement("script");
+//     script.src = "/js/index.js";
+//     document.body.appendChild(script);
+// }
 
 function loadGuestScript() {
     const script = document.createElement("script");
