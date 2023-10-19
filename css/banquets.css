@@ -86,3 +86,77 @@ i {
 .hide {
     display: none;
 }
+
+.menu {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.options {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #202036;
+    color: #ffffff;
+    font-family: "Playfair Display", "sans-seriff";
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.options li {
+    cursor: pointer;
+    padding: 1rem 0.95rem 1rem 0.95rem;
+    font-weight: 600;
+    width: 15%;
+    text-align: center;
+}
+
+.selected {
+    z-index: 1;
+    background-color: #ffffff;
+    color: #202036;
+}
+/* --------------------------------------------------------------- */
+/* The dinner menu content */
+.dinnerContentMenu {
+    border-left: solid 1px rgba(84, 84, 84, 0.15);
+    border-right: solid 1px rgba(84, 84, 84, 0.15);
+    border-bottom: solid 1px rgba(84, 84, 84, 0.15);
+    padding-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    color: #545454;
+    font-size: 0.9rem;
+}
+
+.dinnerContentMenu + div {
+    padding-bottom: 2rem;
+}
+.dinnerContentMenu h3 {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.dinnerContentMenu div:first-child p {
+    padding: 0rem 0rem 0rem 1rem;
+    line-height: 1.2rem;
+}
+
+.dinnerContentMenu ul {
+    list-style: square;
+    margin-left: 3rem;
+    line-height: 2.5rem;
+    align-items: center;
+}
+
+.dinnerContentMenu ul:last-child {
+    padding-bottom: 3rem;
+}
+
+li div {
+    line-height: 1.4rem;
+}
+
+/* --------------------------------------------------------------- */
